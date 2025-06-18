@@ -1,0 +1,12 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/ollama/ollama/benchmark
+cpu: Apple M4 Max
+BenchmarkColdStart/phi4:14b/cold/short_prompt-16         	       1	3674895875 ns/op	   0.00 MB/s	        41.83 gen_tok/s	       100.0 gen_tokens	       883.0 load_ms	        35.05 prompt_tok/s	        14.00 prompt_tokens	      1284 ttft_ms
+BenchmarkColdStart/phi4:14b/cold/medium_prompt-16        	       1	13496037708 ns/op	   0.00 MB/s	        40.64 gen_tok/s	       500.0 gen_tokens	       861.0 load_ms	        45.68 prompt_tok/s	        15.00 prompt_tokens	      1191 ttft_ms
+BenchmarkColdStart/phi4:14b/cold/long_prompt-16          	       1	26656105250 ns/op	   0.00 MB/s	        39.29 gen_tok/s	      1000 gen_tokens	       870.0 load_ms	        48.57 prompt_tok/s	        16.00 prompt_tokens	      1200 ttft_ms
+BenchmarkWarmStart/phi4:14b/warm/short_prompt-16         	       1	2479058792 ns/op	   0.00 MB/s	        40.93 gen_tok/s	       100.0 gen_tokens	        10.00 load_ms	       577.5 prompt_tok/s	        14.00 prompt_tokens	        36.00 ttft_ms
+BenchmarkWarmStart/phi4:14b/warm/medium_prompt-16        	       1	13339459375 ns/op	   0.00 MB/s	        37.59 gen_tok/s	       500.0 gen_tokens	        10.00 load_ms	       614.4 prompt_tok/s	        15.00 prompt_tokens	        36.00 ttft_ms
+BenchmarkWarmStart/phi4:14b/warm/long_prompt-16          	       1	26331147625 ns/op	   0.00 MB/s	        38.03 gen_tok/s	      1000 gen_tokens	        10.00 load_ms	       648.4 prompt_tok/s	        16.00 prompt_tokens	        36.00 ttft_ms
+PASS
+ok  	github.com/ollama/ollama/benchmark	100.790s

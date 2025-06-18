@@ -1,0 +1,12 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/ollama/ollama/benchmark
+cpu: Apple M4 Max
+BenchmarkColdStart/deepseek-r1:1.5b/cold/short_prompt-16         	       2	 983279813 ns/op	   0.00 MB/s	       183.8 gen_tok/s	       100.0 gen_tokens	       421.0 load_ms	       128.6 prompt_tok/s	         7.000 prompt_tokens	       477.0 ttft_ms
+BenchmarkColdStart/deepseek-r1:1.5b/cold/medium_prompt-16        	       1	3239064334 ns/op	   0.00 MB/s	       181.7 gen_tok/s	       500.0 gen_tokens	       418.0 load_ms	       122.8 prompt_tok/s	         8.000 prompt_tokens	       485.0 ttft_ms
+BenchmarkColdStart/deepseek-r1:1.5b/cold/long_prompt-16          	       1	6182334708 ns/op	   0.00 MB/s	       175.8 gen_tok/s	      1000 gen_tokens	       421.0 load_ms	       132.8 prompt_tok/s	         9.000 prompt_tokens	       491.0 ttft_ms
+BenchmarkWarmStart/deepseek-r1:1.5b/warm/short_prompt-16         	       2	 506248875 ns/op	   0.00 MB/s	       189.4 gen_tok/s	        84.00 gen_tokens	        14.00 load_ms	      1222 prompt_tok/s	         7.000 prompt_tokens	        20.00 ttft_ms
+BenchmarkWarmStart/deepseek-r1:1.5b/warm/medium_prompt-16        	       1	2753447875 ns/op	   0.00 MB/s	       183.0 gen_tok/s	       500.0 gen_tokens	        14.00 load_ms	      1442 prompt_tok/s	         8.000 prompt_tokens	        20.00 ttft_ms
+BenchmarkWarmStart/deepseek-r1:1.5b/warm/long_prompt-16          	       1	5780668375 ns/op	   0.00 MB/s	       173.7 gen_tok/s	      1000 gen_tokens	        14.00 load_ms	      1575 prompt_tok/s	         9.000 prompt_tokens	        21.00 ttft_ms
+PASS
+ok  	github.com/ollama/ollama/benchmark	27.775s

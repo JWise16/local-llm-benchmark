@@ -1,0 +1,12 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/ollama/ollama/benchmark
+cpu: Apple M4 Max
+BenchmarkColdStart/qwen3:4b/cold/short_prompt-16         	       1	1996821500 ns/op	   0.00 MB/s	        97.74 gen_tok/s	       100.0 gen_tokens	       727.0 load_ms	        49.33 prompt_tok/s	        12.00 prompt_tokens	       973.0 ttft_ms
+BenchmarkColdStart/qwen3:4b/cold/medium_prompt-16        	       1	6270185542 ns/op	   0.00 MB/s	        92.72 gen_tok/s	       500.0 gen_tokens	       675.0 load_ms	        65.61 prompt_tok/s	        13.00 prompt_tokens	       876.0 ttft_ms
+BenchmarkColdStart/qwen3:4b/cold/long_prompt-16          	       1	12280472666 ns/op	   0.00 MB/s	        87.61 gen_tok/s	      1000 gen_tokens	       668.0 load_ms	        72.42 prompt_tok/s	        14.00 prompt_tokens	       863.0 ttft_ms
+BenchmarkWarmStart/qwen3:4b/warm/short_prompt-16         	       1	1045100583 ns/op	   0.00 MB/s	        98.20 gen_tok/s	       100.0 gen_tokens	        15.00 load_ms	      1123 prompt_tok/s	        12.00 prompt_tokens	        26.00 ttft_ms
+BenchmarkWarmStart/qwen3:4b/warm/medium_prompt-16        	       1	5422147708 ns/op	   0.00 MB/s	        92.70 gen_tok/s	       500.0 gen_tokens	        15.00 load_ms	      1203 prompt_tok/s	        13.00 prompt_tokens	        26.00 ttft_ms
+BenchmarkWarmStart/qwen3:4b/warm/long_prompt-16          	       1	11419656709 ns/op	   0.00 MB/s	        87.80 gen_tok/s	      1000 gen_tokens	        14.00 load_ms	      1292 prompt_tok/s	        14.00 prompt_tokens	        26.00 ttft_ms
+PASS
+ok  	github.com/ollama/ollama/benchmark	46.594s
